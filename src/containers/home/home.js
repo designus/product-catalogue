@@ -7,7 +7,7 @@ import { ProductGroups, ProductFilter, ProductList } from '../../components';
 class HomePageComponent extends Component {
 
   componentDidMount() {
-    if (this.props.products.length === 0) {
+    if (!Object.keys(this.props.products).length) {
       fetchData().then(data => this.props.receiveProducts(data))
     } 
   }
@@ -17,7 +17,7 @@ class HomePageComponent extends Component {
       <div>
         <ProductGroups />
         <ProductFilter />
-        <ProductList />
+        <ProductList products={this.props.products}/>
       </div>
     )
   }

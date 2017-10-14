@@ -1,6 +1,6 @@
 import { RECEIVE_DATA } from '../actions';
 
-const products = (state = [], action) => {
+const products = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_DATA:
       return action.products;
