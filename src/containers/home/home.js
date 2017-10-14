@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { fetchData } from '../../apiMock';
 import { receiveData } from '../../redux/actions';
-import { connect } from 'react-redux';
+import { ProductGroups, ProductFilter, ProductList } from '../../components';
 
 class HomePageComponent extends Component {
 
@@ -12,25 +13,22 @@ class HomePageComponent extends Component {
   }
 
   render() {
-    console.log('Products', this.props.products);
     return (
       <div>
-        This is home page
+        <ProductGroups />
+        <ProductFilter />
+        <ProductList />
       </div>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.products
-  };
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    receiveProducts: (data) => dispatch(receiveData(data))
-  }
-}
+const mapStateToProps = (state) => ({
+  products: state.products  
+})
+    
+const mapDispatchToProps = (dispatch) => ({
+  receiveProducts: (data) => dispatch(receiveData(data))
+})
 
 export const HomePage = connect(mapStateToProps, mapDispatchToProps)(HomePageComponent);
