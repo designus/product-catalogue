@@ -1,11 +1,11 @@
 import React from 'react';
 import { Product } from '../product';
 
-export const ProductList = ({products}) => {
+export const ProductList = ({filteredProducts, productsMap}) => {
   return (
     <div>
-      {Object.keys(products).map((product, index) => 
-        (<Product product={products[product]} key={index} />)
+      {filteredProducts.map((id, index) => 
+        (<Product key={index} product={productsMap[id]} />)
       )}
     </div>
   )
