@@ -1,4 +1,4 @@
-import { ADD_TO_CART, UPDATE_CART } from '../actions';
+import { ADD_TO_CART, UPDATE_CART, PLACE_ORDER } from '../actions';
 
 const SHIPPING_PRICE = 140;
 const INSTALLATION_PRICE = 1200;
@@ -43,6 +43,12 @@ const cart = (state = initialCartState, action) => {
             subTotal: price * quantity
           }
         }
+      }
+    case PLACE_ORDER:
+      return {
+        ...state,
+        totalSum: 0,
+        products: {}
       }
       
     default:
