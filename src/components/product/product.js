@@ -1,9 +1,9 @@
 import React from 'react';
 import { formatPrice } from '../../utils';
 
-export const Product = ({product}) => {
+export const Product = ({product, addToCart}) => {
   return (
-    <div>
+    <div onClick={addToCart.bind(null, product)}>
       <h2>{product.name}</h2>
       <hr />
       <div>

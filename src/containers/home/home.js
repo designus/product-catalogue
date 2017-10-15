@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../../apiMock';
-import { receiveData } from '../../redux/actions';
+import { receiveData, addToCart, updateCart } from '../../redux/actions';
 import { ProductGroups, ProductFilter, ProductList } from '../../components';
 
 const PRODUCT_LIMIT = 6;
@@ -11,7 +11,10 @@ class HomePageComponent extends Component {
   state: {}
 
   componentWillReceiveProps(nextProps) {
-    const products = nextProps.products;
+    this.setInitialState(nextProps.products);
+  }
+
+  setInitialState(products) {
     const {priceMin, priceMax} = this.getPriceRange(products);
     const filteredProducts = Object.keys(products).slice(0, PRODUCT_LIMIT);
 
@@ -28,7 +31,9 @@ class HomePageComponent extends Component {
   componentDidMount() {
     if (!Object.keys(this.props.products).length) {
       fetchData().then(data => this.props.receiveProducts(data))
-    } 
+    } else {
+      this.setInitialState(this.props.products)
+    }
   }
 
   getPriceRange(products) {
@@ -37,6 +42,12 @@ class HomePageComponent extends Component {
       priceMin: Math.min(...allPrices),
       priceMax: Math.max(...allPrices)
     };
+  }
+
+  addToCart = (product) => {
+    const addToCart = this.props.cart.products[product.id] ? this.props.updateCart : this.props.addToCart;
+    addToCart(product);
+    this.props.history.push('/cart')
   }
 
   getFilteredProducts({priceMin, priceMax, productLimit, products}) {
@@ -84,6 +95,7 @@ class HomePageComponent extends Component {
             productsMap={products}
             loadMoreData={this.onLoadMoreData}
             limit={productLimit}
+            addToCart={this.addToCart}
           />
         </div>
       )
@@ -93,11 +105,14 @@ class HomePageComponent extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  products: state.products  
+  products: state.products,
+  cart: state.cart
 })
     
 const mapDispatchToProps = (dispatch) => ({
-  receiveProducts: (data) => dispatch(receiveData(data))
+  receiveProducts: (data) => dispatch(receiveData(data)),
+  addToCart: (product) => dispatch(addToCart(product)),
+  updateCart: (product) => dispatch(updateCart(product))
 })
 
 export const HomePage = connect(mapStateToProps, mapDispatchToProps)(HomePageComponent);
