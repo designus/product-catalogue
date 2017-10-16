@@ -85,19 +85,21 @@ class HomePageComponent extends Component {
       return (
         <div>
           <Header />
-          <ProductFilter 
-            priceMin={priceMin}
-            priceMax={priceMax}
-            priceRange={priceRange}
-            onChange={this.onPriceRangeChange}
-          />
-          <ProductList 
-            filteredProducts={filteredProducts}
-            productsMap={products}
-            loadMoreData={this.onLoadMoreData}
-            limit={productLimit}
-            addToCart={this.addToCart}
-          />
+          <section className="content">
+            <ProductFilter 
+              priceMin={priceMin}
+              priceMax={priceMax}
+              priceRange={priceRange}
+              onChange={this.onPriceRangeChange}
+            />
+            <ProductList 
+              filteredProducts={filteredProducts}
+              productsMap={products}
+              loadMoreData={this.onLoadMoreData}
+              limit={productLimit}
+              addToCart={this.addToCart}
+            />
+          </section>
         </div>
       )
     }
