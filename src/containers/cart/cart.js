@@ -27,4 +27,4 @@ class CartPageComponent extends Component {
 const mapStateToProps = (state) => ({cart: state.cart, products: state.products})
 const mapDispatchToProps = (dispatch) => ({placeOrder: () => dispatch(placeOrder())})
 
-export const CartPage  = connect(mapStateToProps)(CartPageComponent);
+export const CartPage  = connect(mapStateToProps, mapDispatchToProps)(CartPageComponent);

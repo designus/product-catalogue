@@ -1,0 +1,91 @@
+.header {
+  height: 605px;
+  background: url('../../images/bg.jpg') no-repeat;
+}
+
+.top-bar {
+  padding: 24px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+.top-left-menu {
+  flex: 5;
+  padding-left: 10px;
+}
+
+.top-left-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.top-left-menu li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.top-left-menu li a {
+  color: #fff;
+  padding: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color .1s linear;
+}
+
+.top-left-menu li a:hover, 
+.top-left-menu li.active a {
+  text-decoration: none;
+  color: #debb71;
+  border-bottom: 1px solid #debb71;
+  transition: color .1s linear;
+}
+
+.top-right-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 0 0 0 15px;
+  flex: 2;  
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.slogan {
+  font-size: 44px;
+  color: #fff;
+  height: 435px;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.product-groups {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  background: #fff;
+  align-items: center;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.group {
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

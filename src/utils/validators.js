@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const required = (value) => {
   const isEmpty = Boolean(value.toString().trim().length)
   if (!isEmpty) {

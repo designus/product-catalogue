@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../../apiMock';
 import { receiveData, addToCart, updateCart } from '../../redux/actions';
-import { ProductGroups, ProductFilter, ProductList } from '../../components';
+import { ProductFilter, ProductList, Header } from '../../components';
+import './home.css';
 
 const PRODUCT_LIMIT = 6;
 
@@ -83,7 +84,7 @@ class HomePageComponent extends Component {
       const {priceMin, priceMax, priceRange, filteredProducts, products, productLimit} = this.state;
       return (
         <div>
-          <ProductGroups />
+          <Header />
           <ProductFilter 
             priceMin={priceMin}
             priceMax={priceMax}
