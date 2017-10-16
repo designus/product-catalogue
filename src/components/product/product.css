@@ -1,0 +1,42 @@
+.product-card {
+  width: 280px;
+  padding: 0 0 30px;
+  cursor: pointer;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  line-height: 32px;
+  color: #2a2b2e;
+  margin: 0;
+  padding: 15px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.product-info {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-info .material {
+  color: #52555d;
+}
+
+.product-info .price {
+  color: #4caf50;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.load-more-data {
+  margin: 20px 0;
+  width: 100%;
+  cursor: pointer;
+  background: rgba(222, 187, 113, .1);
+  color: #debb71;
+  text-align: center;
+  padding: 15px 0;
+
+
+}

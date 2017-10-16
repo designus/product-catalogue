@@ -26,7 +26,7 @@ export const Header = () => {
         </div>
       </div>
       <div className="slogan">
-        <span>Beauty, strength unbeatable character that makes a beautiful backdrop in any home.</span>
+        <div>Beauty, strength unbeatable character that makes a beautiful backdrop in any home.</div>
       </div>
       <div className="product-groups"> 
         <div className="group"><span>Hardwood</span></div>

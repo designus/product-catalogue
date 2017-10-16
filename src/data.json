@@ -3,49 +3,49 @@
     "id": 1,
     "name": "Armstrong Bruce American Home Natural Oak",
     "price": 210,
-    "type": "Hardwood",
+    "img": "wood1.png",
     "wood": "Tempered Oak"
   },
   {
     "id": 2,
     "name": "White Noised Temper Canadian Oak",
     "price": 740,
-    "type": "Hardwood",
+    "img": "wood2.png",
     "wood": "Canadian Drifted Oak"
   },
   {
     "id": 3,
     "name": "Brown Noised Textured Canadian Oak",
     "price": 560,
-    "type": "Hardwood",
+    "img": "wood3.png",
     "wood": "Canadian Oak"
   },
   {
     "id": 4,
     "name": "High quality australian pine tree",
     "price": 300,
-    "type": "Hardwood",
+    "img": "wood1.png",
     "wood": "Australian Pine tree"
   },
   {
     "id": 5,
     "name": "Brown Textured chestnut",
     "price": 360,
-    "type": "Hardwood",
+    "img": "wood2.png",
     "wood": "Chestnut"
   },
   {
     "id": 6,
     "name": "Light Oak",
     "price": 600,
-    "type": "Hardwood",
+    "img": "wood3.png",
     "wood": "Oak"
   },
   {
     "id": 7,
     "name": "White Textured Hazelnut tree",
     "price": 270,
-    "type": "Hardwood",
+    "img": "wood1.png",
     "wood": "Hazelnut"
   }
 ]
