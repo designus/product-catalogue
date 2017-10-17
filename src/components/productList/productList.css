@@ -3,3 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.product-list.align-left {
+  justify-content: flex-start;
+}
+
+.product-list.align-left .product-card {
+  margin-right: 35px;
+}

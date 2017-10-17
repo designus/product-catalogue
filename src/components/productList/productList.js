@@ -8,8 +8,9 @@ export const LoadMoreProductsBtn = ({showBtn, loadMoreData}) => {
 
 export const ProductList = ({filteredProducts, productsMap, loadMoreData, limit, addToCart}) => {
   const showLoadMoreData = productsMap && limit < Object.keys(productsMap).length;
+  const className = `product-list ${filteredProducts.length === 2 ? 'align-left' : ''}`;
   return (
-    <div className="product-list">
+    <div className={className}>
       {filteredProducts.map((id, index) => (<Product key={index} product={productsMap[id]} addToCart={addToCart} />))}
       <LoadMoreProductsBtn 
         showBtn={showLoadMoreData}

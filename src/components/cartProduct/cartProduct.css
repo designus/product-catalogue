@@ -9,7 +9,7 @@
 
 .cart-product-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .cart-product-info {
