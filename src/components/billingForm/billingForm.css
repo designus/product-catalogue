@@ -1,0 +1,65 @@
+.billing-form {
+  flex: 2;
+  padding: 0 30px 0;
+}
+
+.billing-form h3 {
+  color: #debb71;
+}
+
+.billing-form input {
+  color: #2a2b2e;
+  border: none;
+  /* background: #F7F7F7;  */
+  padding: 12px 20px;
+  background: #F7F7F7; 
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.form-row.col-1 > div,
+.form-row.col-1 input,
+.form-row.col-2 input {
+  width: 100%;
+}
+
+.form-row.col-2 > div {
+  width: 49%;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+.submit {
+  background: #debb71;
+  color: #fff;
+  padding: 10px 15px;
+  width: 100%;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.validation-error {
+  color: #debb71;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+.submit[disabled] {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

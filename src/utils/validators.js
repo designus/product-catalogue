@@ -1,7 +1,11 @@
+import React from 'react';
+
 export const required = (value) => {
   const isEmpty = Boolean(value.toString().trim().length)
   if (!isEmpty) {
-    return 'Field is required';
+    return (
+      <div className="validation-error">Field is required</div>
+    );
   }
 };
 
@@ -18,7 +22,11 @@ export const expirationDate = (value) => {
   const isMonthValid = month && month <= 12 && (isSameYear ? month > currentMonth : month >= 1)
 
   if (!isYearValid || !isMonthValid) {
-    return 'Value is not valid or does not follow YY/MM format';
+    return (
+      <div className="validation-error">
+        Value is not valid or does not follow MM/YYYY format
+      </div>
+    )
   }
 }
 
@@ -27,8 +35,16 @@ export const cvvNumber = (value) => {
   const numericValue = parseInt(formattedValue, 10);
   
   if (isNaN(numericValue)) {
-    return 'CVV value should be a number';
+    return (
+      <div className="validation-error">
+        CVV value should be a number
+      </div>
+    )
   } else if (numericValue > 999 || numericValue < 100 || formattedValue.length !== 3) {
-    return 'CVV value should have exactly 3 numbers'
+    return (
+      <div className="validation-error">
+        CVV value should have exactly 3 numbers
+      </div>
+    )
   } 
 };

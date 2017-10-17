@@ -1,5 +1,6 @@
 import React from 'react';
 import { CartProductList } from '../cartProductList';
+import './cartModule.css';
 
 export const AdditionalPricing = ({shippingPrice, installationPrice}) => {
   return (
@@ -18,7 +19,7 @@ export const AdditionalPricing = ({shippingPrice, installationPrice}) => {
 
 export const CartModule = ({cart, productsMap}) => {
   return (
-    <div>
+    <div className="cart-module">
       <h2>Summary</h2>
       {Object.keys(cart.products).length ? 
         <div>
@@ -30,9 +31,8 @@ export const CartModule = ({cart, productsMap}) => {
             shippingPrice={cart.shippingPrice}
             installationPrice={cart.installationPrice}
           />
-          <hr />
           <div className="total-sum">
-            {cart.totalSum}
+            ${cart.totalSum}
           </div>
         </div>
       : 'Your cart is empty'}

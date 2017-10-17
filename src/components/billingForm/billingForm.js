@@ -3,21 +3,22 @@ import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
 import Button from 'react-validation/build/button';
 import {required, expirationDate, cvvNumber} from '../../utils/validators';
+import './billingForm.css';
 
 export const BillingForm = ({submitForm}) => {
   return ( 
-    <Form>
+    <Form className="billing-form" onSubmit={submitForm}>
       <h3>3. Billing</h3>
-      <div>
+      <div className="form-row col-1">
         <Input 
           placeholder="Your credit card number"
           name='cardNumber'
           validations={[required]}
         />
       </div>
-      <div>
+      <div className="form-row col-2">
         <Input 
-          placeholder="Expiration date (MM/YY)"
+          placeholder="Expiration date (MM/YYYY)"
           name='expirationDate'
           validations={[required, expirationDate]}
         />
@@ -27,7 +28,7 @@ export const BillingForm = ({submitForm}) => {
           validations={[required, cvvNumber]}
         />
       </div>
-      <Button onClick={submitForm}>Continue to review</Button>        
+      <Button className="submit">Continue to review</Button>        
     </Form>
   );
 }

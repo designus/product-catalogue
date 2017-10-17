@@ -1,0 +1,36 @@
+.cart-module {
+  background: rgba(222, 187, 113, .1);
+  padding: 25px 20px 10px 20px;
+  flex: 1;
+}
+
+.cart-module h2 {
+  font-size: 16px;
+  margin: 0 0 20px;
+  color: #debb71;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.price-item div:first-child {
+  font-size: 14px;
+  color: #2a2b2e;
+}
+
+.price-item div:last-child {
+  font-size: 18px;
+  color: #2a2b2e;
+}
+
+.total-sum {
+  border-top: 1px solid #e7e7e7;  
+  text-align: right;
+  color: #1ba591;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: bold;
+}

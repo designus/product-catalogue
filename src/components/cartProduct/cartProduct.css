@@ -1,0 +1,29 @@
+.cart-product {
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 15px;
+}
+
+.cart-product-thumb img {
+  max-width: 70px;
+}
+
+.cart-product-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-product-info {
+  padding-left: 15px;
+  color: #2a2b2e;
+}
+
+.cart-product-info h3 {
+  font-size: 14px;
+  margin: 0 0 5px;
+  line-height: 20px;
+}
+
+.cart-product-info > div {
+  color: #2a2b2e;
+  font-size: 13px;
+}

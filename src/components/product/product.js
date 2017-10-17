@@ -5,7 +5,7 @@ export const Product = ({product, addToCart}) => {
   return (
     <div className="product-card" onClick={addToCart.bind(null, product)}>
       <div className="product-image">
-        <img src={require(`../../images/${product.img}`)} />
+        <img alt={product.name} src={require(`../../images/${product.img}`)} />
       </div>
       <h2>{product.name}</h2>
       <div className="product-info">
