@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Form from 'react-validation/build/form';
 import Input from 'react-validation/build/input';
-import Button from 'react-validation/build/button';
 import {required, expirationDate, cvvNumber} from '../../utils/validators';
 import './billingForm.css';
 
