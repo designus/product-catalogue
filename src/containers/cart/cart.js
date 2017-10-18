@@ -8,8 +8,7 @@ import logo from '../../images/logo-dark.png';
 
 class CartPageComponent extends Component {
 
-  submitForm = (e) => {
-    e.preventDefault();
+  placeOrder = () => {
     this.props.placeOrder();
     this.props.history.push('/');    
   }
@@ -30,7 +29,7 @@ class CartPageComponent extends Component {
           </div>
         </section>
         <section className="cart-content">
-          <BillingForm submitForm={this.submitForm} />
+          <BillingForm placeOrder={this.placeOrder} />
           <CartModule 
             cart={this.props.cart}
             productsMap={this.props.products}
