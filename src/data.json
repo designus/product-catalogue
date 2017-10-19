@@ -47,5 +47,19 @@
     "price": 270,
     "img": "wood1.png",
     "wood": "Hazelnut"
+  },
+  {
+    "id": 8,
+    "name": "Some other product",
+    "price": 405,
+    "img": "wood1.png",
+    "wood": "Hazelnut"
+  },
+  {
+    "id": 9,
+    "name": "Beautifully textured Oak tree",
+    "price": 860,
+    "img": "wood2.png",
+    "wood": "Oak"
   }
 ]

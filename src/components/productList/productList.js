@@ -3,12 +3,16 @@ import { Product } from '../product';
 import './productList.css';
 
 export const LoadMoreProductsBtn = ({showBtn, loadMoreData}) => {
-  return showBtn ?<div className="load-more-data" onClick={loadMoreData}>Load more data</div> : null
+  return showBtn ? <div className="load-more-data" onClick={loadMoreData}>Load more data</div> : null
 }
 
 export const ProductList = ({filteredProducts, productsMap, loadMoreData, limit, addToCart}) => {
-  const showLoadMoreData = productsMap && limit < Object.keys(productsMap).length;
-  const className = `product-list ${filteredProducts.length === 2 ? 'align-left' : ''}`;
+  const hasEnoughData = limit < Object.keys(productsMap).length;
+  const hasEnoughFilteredProducts = filteredProducts.length >= limit;
+  const showLoadMoreData = productsMap && hasEnoughData && hasEnoughFilteredProducts;
+  const isPositionAdjusted = filteredProducts.length % 3 !== 0;
+  const className = `product-list ${isPositionAdjusted ? 'alternative' : ''}`;
+  
   return (
     <div className={className}>
       {filteredProducts.map((id, index) => (<Product key={index} product={productsMap[id]} addToCart={addToCart} />))}

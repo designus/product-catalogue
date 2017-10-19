@@ -9,7 +9,7 @@ const PRODUCT_LIMIT = 6;
 
 class HomePageComponent extends Component {
 
-  state: {}
+  state
 
   componentWillReceiveProps(nextProps) {
     this.setInitialState(nextProps.products);
@@ -25,7 +25,8 @@ class HomePageComponent extends Component {
       filteredProducts,
       products,
       productLimit: PRODUCT_LIMIT,
-      priceRange: [priceMin, priceMax]
+      priceRange: [priceMin, priceMax],
+      isInitial: true
     })
   }
 
